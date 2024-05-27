@@ -21,9 +21,7 @@ class TestStack extends Stack {
     const eicEndpoint = new ocf.aws_ec2.InstanceConnectEndpoint(
       this,
       'InstanceConnectEndpoint',
-      {
-        vpc,
-      },
+      { vpc },
     );
 
     const instance = new PreinstalledAmazonLinuxInstance(this, 'Instance', {
@@ -33,7 +31,12 @@ class TestStack extends Stack {
         generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2023,
       }),
       preinstalledSoftware: {
-        type: [PreinstalledSoftwareType.NODEJS, PreinstalledSoftwareType.DOCKER, PreinstalledSoftwareType.VSCODE, PreinstalledSoftwareType.GIT],
+        type: [
+          PreinstalledSoftwareType.NODEJS,
+          PreinstalledSoftwareType.DOCKER,
+          PreinstalledSoftwareType.VSCODE,
+          PreinstalledSoftwareType.GIT,
+        ],
         others: ['jq'],
       },
     });
