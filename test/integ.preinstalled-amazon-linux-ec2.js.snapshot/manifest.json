@@ -97,25 +97,7 @@
         "/testStack/InstanceConnectEndpoint/SecurityGroup": [
           {
             "type": "aws:cdk:warning",
-            "data": "Ignoring Egress rule since 'allowAllOutbound' is set to true; To add customized rules, set allowAllOutbound=false on the SecurityGroup [ack: @aws-cdk/aws-ec2:ipv4IgnoreEgressRule]",
-            "trace": [
-              "Annotations.addMessage (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "SecurityGroup.addEgressRule (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/security-group.js:1:7618)",
-              "/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1860",
-              "ReactiveList.forEachAndForever (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5923)",
-              "/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1821",
-              "ReactiveList.forEachAndForever (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5923)",
-              "Connections.allowTo (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1749)",
-              "new TestStack (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/test/integ.preinstalled-amazon-linux-ec2.js:56:33)",
-              "Object.<anonymous> (/Users/kazuhoshinozuka/git/cdk-preinstalled-amazon-linux-ec2/test/integ.preinstalled-amazon-linux-ec2.js:59:15)",
-              "Module._compile (node:internal/modules/cjs/loader:1376:14)",
-              "Module._extensions..js (node:internal/modules/cjs/loader:1435:10)",
-              "Module.load (node:internal/modules/cjs/loader:1207:32)",
-              "Module._load (node:internal/modules/cjs/loader:1023:12)",
-              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)",
-              "node:internal/main/run_main_module:28:49"
-            ]
+            "data": "Ignoring Egress rule since 'allowAllOutbound' is set to true; To add customized rules, set allowAllOutbound=false on the SecurityGroup [ack: @aws-cdk/aws-ec2:ipv4IgnoreEgressRule]"
           }
         ],
         "/testStack/InstanceConnectEndpoint/SecurityGroup/Resource": [
