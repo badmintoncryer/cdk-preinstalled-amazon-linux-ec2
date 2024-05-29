@@ -1,7 +1,7 @@
 import { App, Stack } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
-import { PreinstalledAmazonLinuxInstance, PreinstalledSoftwareType } from '../src';
+import { PreinstalledAmazonLinuxInstance, PreinstalledSoftwarePackage } from '../src';
 
 describe('PreinstalledAmazonLinuxInstance', () => {
   let stack: Stack;
@@ -17,7 +17,7 @@ describe('PreinstalledAmazonLinuxInstance', () => {
       instanceType: new ec2.InstanceType('t3.micro'),
       machineImage: new ec2.AmazonLinuxImage(),
       preinstalledSoftware: {
-        type: [PreinstalledSoftwareType.NODEJS],
+        packages: [PreinstalledSoftwarePackage.NODEJS],
       },
     });
 
@@ -35,7 +35,7 @@ describe('PreinstalledAmazonLinuxInstance', () => {
       instanceType: new ec2.InstanceType('t3.micro'),
       machineImage: new ec2.AmazonLinuxImage(),
       preinstalledSoftware: {
-        type: [PreinstalledSoftwareType.DOCKER],
+        packages: [PreinstalledSoftwarePackage.DOCKER],
       },
     });
 
@@ -53,7 +53,7 @@ describe('PreinstalledAmazonLinuxInstance', () => {
       instanceType: new ec2.InstanceType('t3.micro'),
       machineImage: new ec2.AmazonLinuxImage(),
       preinstalledSoftware: {
-        type: [PreinstalledSoftwareType.VSCODE],
+        packages: [PreinstalledSoftwarePackage.VSCODE],
       },
     });
 
@@ -71,7 +71,7 @@ describe('PreinstalledAmazonLinuxInstance', () => {
       instanceType: new ec2.InstanceType('t3.micro'),
       machineImage: new ec2.AmazonLinuxImage(),
       preinstalledSoftware: {
-        type: [PreinstalledSoftwareType.GIT],
+        packages: [PreinstalledSoftwarePackage.GIT],
       },
     });
 

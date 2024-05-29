@@ -16,7 +16,7 @@ export interface PreinstalledAmazonLinuxInstanceProps extends ec2.InstanceProps 
 /**
  * The type of preinstalled software.
  */
-export enum PreinstalledSoftwareType {
+export enum PreinstalledSoftwarePackage {
   /**
    * Node.js
    */
@@ -44,7 +44,7 @@ export interface PreinstalledSoftware {
    *
    * @default - no software is preinstalled
    */
-  readonly type?: PreinstalledSoftwareType[];
+  readonly packages?: PreinstalledSoftwarePackage[];
 
   /**
    * Whether to install other software.
@@ -70,7 +70,7 @@ export class PreinstalledAmazonLinuxInstance extends ec2.Instance {
         'sudo dnf update -y',
       );
       const preinstalledSoftware = props.preinstalledSoftware;
-      if (preinstalledSoftware.type?.includes(PreinstalledSoftwareType.NODEJS)) {
+      if (preinstalledSoftware.packages?.includes(PreinstalledSoftwarePackage.NODEJS)) {
         userData.addCommands(
           'touch ~/.bashrc',
           'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash',
@@ -84,7 +84,7 @@ export NVM_DIR="/.nvm"
 EOF`,
         );
       }
-      if (preinstalledSoftware.type?.includes(PreinstalledSoftwareType.DOCKER)) {
+      if (preinstalledSoftware.packages?.includes(PreinstalledSoftwarePackage.DOCKER)) {
         userData.addCommands(
           'sudo amazon-linux-extras install docker',
           'sudo systemctl start docker',
@@ -92,7 +92,7 @@ EOF`,
           'sudo usermod -a -G docker ec2-user',
         );
       }
-      if (preinstalledSoftware.type?.includes(PreinstalledSoftwareType.VSCODE)) {
+      if (preinstalledSoftware.packages?.includes(PreinstalledSoftwarePackage.VSCODE)) {
         userData.addCommands(
           'sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc',
           'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null',
@@ -100,7 +100,7 @@ EOF`,
           'sudo dnf install -y code',
         );
       }
-      if (preinstalledSoftware.type?.includes(PreinstalledSoftwareType.GIT)) {
+      if (preinstalledSoftware.packages?.includes(PreinstalledSoftwarePackage.GIT)) {
         userData.addCommands(
           'sudo dnf install -y git',
         );

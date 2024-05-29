@@ -38,7 +38,7 @@ new PreinstalledAmazonLinuxInstance(this, 'Instance', {
   }),
   // Specify preinstalled software
   preinstalledSoftware: {
-    type: [
+    packages: [
       PreinstalledSoftwareType.NODEJS,
       PreinstalledSoftwareType.VSCODE,
       PreinstalledSoftwareType.GIT,
@@ -85,8 +85,8 @@ Ofcourse, you can customize the additional user data script by calling `instance
 ```typescript
 declare const instance: PreinstalledAmazonLinuxInstance;
 
-// install Postgresql
+// install yarn
 instance.userData.addCommands(
-  'sudo dnf install -y postgresql15-server'
+  'npm install -g yarn'
 );
 ```

@@ -910,7 +910,7 @@ const preinstalledSoftware: PreinstalledSoftware = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftware.property.others">others</a></code> | <code>string[]</code> | Whether to install other software. |
-| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftware.property.type">type</a></code> | <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType">PreinstalledSoftwareType</a>[]</code> | The type of preinstalled software. |
+| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftware.property.packages">packages</a></code> | <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage">PreinstalledSoftwarePackage</a>[]</code> | The type of preinstalled software. |
 
 ---
 
@@ -929,13 +929,13 @@ This is a list of software to install and passed to `dnf install <software>`
 
 ---
 
-##### `type`<sup>Optional</sup> <a name="type" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftware.property.type"></a>
+##### `packages`<sup>Optional</sup> <a name="packages" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftware.property.packages"></a>
 
 ```typescript
-public readonly type: PreinstalledSoftwareType[];
+public readonly packages: PreinstalledSoftwarePackage[];
 ```
 
-- *Type:* <a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType">PreinstalledSoftwareType</a>[]
+- *Type:* <a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage">PreinstalledSoftwarePackage</a>[]
 - *Default:* no software is preinstalled
 
 The type of preinstalled software.
@@ -946,7 +946,7 @@ The type of preinstalled software.
 
 ## Enums <a name="Enums" id="Enums"></a>
 
-### PreinstalledSoftwareType <a name="PreinstalledSoftwareType" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType"></a>
+### PreinstalledSoftwarePackage <a name="PreinstalledSoftwarePackage" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage"></a>
 
 The type of preinstalled software.
 
@@ -954,35 +954,35 @@ The type of preinstalled software.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.NODEJS">NODEJS</a></code> | Node.js. |
-| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.DOCKER">DOCKER</a></code> | Docker. |
-| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.VSCODE">VSCODE</a></code> | Visual Studio Code. |
-| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.GIT">GIT</a></code> | Git. |
+| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.NODEJS">NODEJS</a></code> | Node.js. |
+| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.DOCKER">DOCKER</a></code> | Docker. |
+| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.VSCODE">VSCODE</a></code> | Visual Studio Code. |
+| <code><a href="#cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.GIT">GIT</a></code> | Git. |
 
 ---
 
-##### `NODEJS` <a name="NODEJS" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.NODEJS"></a>
+##### `NODEJS` <a name="NODEJS" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.NODEJS"></a>
 
 Node.js.
 
 ---
 
 
-##### `DOCKER` <a name="DOCKER" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.DOCKER"></a>
+##### `DOCKER` <a name="DOCKER" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.DOCKER"></a>
 
 Docker.
 
 ---
 
 
-##### `VSCODE` <a name="VSCODE" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.VSCODE"></a>
+##### `VSCODE` <a name="VSCODE" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.VSCODE"></a>
 
 Visual Studio Code.
 
 ---
 
 
-##### `GIT` <a name="GIT" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwareType.GIT"></a>
+##### `GIT` <a name="GIT" id="cdk-preinstalled-amazon-linux-ec2.PreinstalledSoftwarePackage.GIT"></a>
 
 Git.
 

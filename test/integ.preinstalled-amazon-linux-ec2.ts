@@ -2,7 +2,7 @@ import { IntegTest } from '@aws-cdk/integ-tests-alpha';
 import * as ocf from '@open-constructs/aws-cdk';
 import { App, Stack, StackProps } from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
-import { PreinstalledAmazonLinuxInstance, PreinstalledSoftwareType } from '../src';
+import { PreinstalledAmazonLinuxInstance, PreinstalledSoftwarePackage } from '../src';
 
 const app = new App();
 
@@ -31,11 +31,11 @@ class TestStack extends Stack {
         generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2023,
       }),
       preinstalledSoftware: {
-        type: [
-          PreinstalledSoftwareType.NODEJS,
-          PreinstalledSoftwareType.DOCKER,
-          PreinstalledSoftwareType.VSCODE,
-          PreinstalledSoftwareType.GIT,
+        packages: [
+          PreinstalledSoftwarePackage.NODEJS,
+          PreinstalledSoftwarePackage.DOCKER,
+          PreinstalledSoftwarePackage.VSCODE,
+          PreinstalledSoftwarePackage.GIT,
         ],
         others: ['jq'],
       },
