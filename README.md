@@ -11,7 +11,7 @@ You can use Node.js, Visual Studio Code, git and other software as soon as the E
 [![Build Status](https://github.com/badmintoncryer/cdk-preinstalled-amazon-linux-ec2/actions/workflows/build.yml/badge.svg)](https://github.com/badmintoncryer/cdk-preinstalled-amazon-linux-ec2/actions/workflows/build.yml)
 [![Release Status](https://github.com/badmintoncryer/cdk-preinstalled-amazon-linux-ec2/actions/workflows/release.yml/badge.svg)](https://github.com/badmintoncryer/cdk-preinstalled-amazon-linux-ec2/actions/workflows/release.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![npm downloads](https://img.shields.io/npm/dm/cdk-preinstalled-amazon-linux-ec2.svg?style=flat)](https://www.npmjs.com/package/cdk-preinstalled-amazon-linux-ec2)
+[![npm downloads](https://img.shields.io/npm/dt/cdk-preinstalled-amazon-linux-ec2.svg?style=flat)](https://www.npmjs.com/package/cdk-preinstalled-amazon-linux-ec2)
 
 ## Usage
 
