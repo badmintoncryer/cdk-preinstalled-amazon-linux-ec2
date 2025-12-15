@@ -19,9 +19,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   ],
   releaseToNpm: true,
   packageName: 'cdk-preinstalled-amazon-linux-ec2',
+  npmTrustedPublishing: true,
+  workflowNodeVersion: '24',
   publishToPypi: {
     distName: 'cdk-preinstalled-amazon-linux-ec2',
     module: 'cdk_preinstalled_amazon_linux_ec2',
+    trustedPublishing: true,
   },
 });
 project.projectBuild.testTask.exec(
