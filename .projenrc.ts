@@ -1,9 +1,11 @@
 import { awscdk } from 'projen';
+import { NodePackageManager } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kazuho CryerShinozuka',
   authorAddress: 'malaysia.cryer@gmail.com',
   cdkVersion: '2.143.0',
   defaultReleaseBranch: 'main',
+  packageManager: NodePackageManager.YARN_CLASSIC,
   jsiiVersion: '~5.8.0',
   name: 'cdk-preinstalled-amazon-linux-ec2',
   projenrcTs: true,
